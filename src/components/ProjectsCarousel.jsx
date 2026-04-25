@@ -22,7 +22,7 @@ const projects = [
     id: 2, 
     title: "L'ATELIER DU BOUCHER", 
     stack: "React • Chakra UI • Node.js • Express • MySQL", 
-    image: "/projects/portfolio_atelier_du_boucher_v2.webp",
+    image: "/projects/portfolio_atelier_du_boucher.webp",
     video: null, 
     description: "Création de la plateforme full-stack 'L'Atlas de l'Artisan Boucher'. Développement d'une API sécurisée (Node/Express, JWT) connectée à une base MySQL, et d'une interface frontend réactive (React/Chakra UI) intégrant un moteur de recherche et une vidéothèque."
   },
