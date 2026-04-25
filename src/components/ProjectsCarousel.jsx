@@ -14,7 +14,7 @@ const projects = [
     id: 1, 
     title: "ANNE JOLY - AUTRICE", 
     stack: "Astro • TailwindCSS", 
-    image: "/projects/portfolio_anne.WebP",
+    image: "/projects/portfolio_anne.webP",
     video: "/projects/demo_anne.mp4", 
     description: "Conception et développement d'un site vitrine pour une autrice. Mise en valeur de ses ouvrages avec une interface fluide, intégration d'une modale de réservation interactive et d'une carte de localisation personnalisée pour les points de vente."
   },
@@ -22,7 +22,7 @@ const projects = [
     id: 2, 
     title: "L'ATELIER DU BOUCHER", 
     stack: "React • Chakra UI • Node.js • Express • MySQL", 
-    image: "/projects/portfolio_atelier_du_boucher.WebP",
+    image: "/projects/portfolio_atelier_du_boucher.webP",
     video: null, 
     description: "Création de la plateforme full-stack 'L'Atlas de l'Artisan Boucher'. Développement d'une API sécurisée (Node/Express, JWT) connectée à une base MySQL, et d'une interface frontend réactive (React/Chakra UI) intégrant un moteur de recherche et une vidéothèque."
   },
@@ -30,7 +30,7 @@ const projects = [
     id: 3, 
     title: "CAMPING BEAUVERT", 
     stack: "React • Material UI • Node.js • Express • Stripe", 
-    image: "/projects/portfolio_camping.WebP",
+    image: "/projects/portfolio_camping.webP",
     video: "/projects/demo_camping.mp4",
     description: "Développement d'une plateforme full-stack de réservation pour un domaine de plein air. Intégration d'un système de filtres par hébergement, d'une galerie photo immersive, d'un module de chat et gestion complète d'un tunnel de paiement sécurisé via Stripe."
   },
@@ -38,7 +38,7 @@ const projects = [
     id: 4, 
     title: "LEAGUE OF LEGENDS", 
     stack: "React • Bootstrap • Axios • API REST", 
-    image: "/projects/portfolio_lol_accueil.WebP",
+    image: "/projects/portfolio_lol_accueil.webP",
     video: "/projects/demo_lol.mp4",
     description: "Création d'un portail web dynamique basé sur l'univers de League of Legends. Consommation de l'API officielle de Riot Games couplée à des bases de données locales personnalisées pour générer un explorateur de factions, un dictionnaire de champions et un système de quiz interactif."
   },
