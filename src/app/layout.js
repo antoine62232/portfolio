@@ -12,7 +12,6 @@ export default function RootLayout({ children }) {
     <html lang="fr" className="antialiased">
       <body className="bg-[#050505] text-white">
         
-        {/* On englobe tout le site avec le Smooth Scroll */}
         <SmoothScroll>
           <Navbar />
           {children}

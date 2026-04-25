@@ -100,7 +100,7 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto w-full relative">
         
         <h2 className="contact-reveal text-sm md:text-lg text-[#D4AF37] font-mono tracking-widest uppercase mb-8">
-          &lt; 03. Contact /&gt;
+          &lt; 04. Contact /&gt;
         </h2>
         
         <p className="contact-reveal text-3xl md:text-5xl font-light leading-tight mb-16 text-white/80">
@@ -122,6 +122,15 @@ export default function Contact() {
                   <div className="relative group">
                     <input 
                       type="text" 
+                      name="user_name" 
+                      required 
+                      className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors peer"
+                      placeholder="Votre nom"
+                    />
+                  </div>
+                  <div className="relative group">
+                    <input 
+                      type="text" 
                       name="user_firstname" 
                       required 
                       className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors peer"
@@ -129,15 +138,6 @@ export default function Contact() {
                     />
                   </div>
 
-                  <div className="relative group">
-                    <input 
-                      type="text" 
-                      name="user_name" 
-                      required 
-                      className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors peer"
-                      placeholder="Votre nom"
-                    />
-                  </div>
                 </div>
 
                 <div className="relative group">
@@ -152,7 +152,7 @@ export default function Contact() {
 
                 <div className="relative group">
                   <textarea 
-                    name="message" // 👈 6. Ajout du name pour le message
+                    name="message"
                     required 
                     rows="4"
                     className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors resize-none peer"
