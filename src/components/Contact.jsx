@@ -108,7 +108,7 @@ export default function Contact() {
           <span className="text-white font-semibold">Parlons-en.</span>
         </p>
 
-        <div className="relative w-full h-[400px]"> 
+        <div className="relative w-full min-h-[550px] md:min-h-[400px] flex items-center justify-center"> 
           
           {!isSent && (
             <div 
