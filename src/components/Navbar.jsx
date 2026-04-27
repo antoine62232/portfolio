@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MagneticLink from './ui/MagneticLink';
+import Image from "next/image";
 
 const navLinks = [
   { name: "À Propos", href: "#about" },
@@ -28,10 +29,16 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 w-full z-50 px-8 py-6 bg-black/40 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
 
-          {/* Logo provisoire */}
-          <div className="text-xl font-bold text-white tracking-tighter relative z-50">
-            PORT<span className="text-[#D4AF37] drop-shadow-[0_0_10px_rgba(212,175,55,0.4)]">FOLIO</span>
-          </div>
+          {/* Logo */}
+          <a href="#" className="relative z-50 transition-transform duration-200 ease-out hover:scale-115">
+            <Image
+              src="/logo-navbar.webp"
+              alt="Antoine Bayart logo"
+              width={100}
+              height={100}
+              className="drop-shadow-[0_0_10px_rgba(212,175,55,0.4)]"
+            />
+          </a>
 
           {/* VERSION ORDINATEUR */}
           <ul className="hidden md:flex space-x-6 items-center">

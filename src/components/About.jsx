@@ -39,7 +39,7 @@ export default function About() {
         </h2>
         
         <p className="about-text text-3xl md:text-5xl font-light leading-tight text-white/80 max-w-4xl">
-          Je transforme des concepts complexes en <span className="text-white font-semibold">expériences numériques immersives</span>. Développeur Full-Stack passionné par la performance et les interfaces interactives.
+          Mon approche est simple : un produit robuste se construit par le souci du détail. De la fluidité des interactions à l'optimisation du code, je conçois des expériences numériques qui ne laissent <span className="text-white font-semibold">rien au hasard.</span>
         </p>
       </div>
     </section>

@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const skillCategories = [
   {
     title: "Frontend & Frameworks",
-    skills: ["React", "Next.js", "Astro", "JavaScript (ES6+)"]
+    skills: ["React", "Next.js", "Astro", "JavaScript"]
   },
   {
     title: "UI & Design Libraries",
@@ -18,6 +18,10 @@ const skillCategories = [
   {
     title: "Backend & Database",
     skills: ["Node.js", "Express", "MySQL", "API REST"]
+  },
+  {
+    title: "Data Science & Machine Learning",
+    skills: ["Python", "Pandas", "Scikit-learn", "Streamlit"]
   },
   {
     title: "Animation & 3D",
@@ -33,7 +37,7 @@ export default function Stack() {
   const sectionRef = useRef();
 
   useGSAP(() => {
-    gsap.fromTo(".skill-category", 
+    gsap.fromTo(".skill-category",
       { y: 30, opacity: 0 },
       {
         scrollTrigger: {
@@ -49,7 +53,7 @@ export default function Stack() {
       }
     );
 
-    gsap.fromTo(".skill-badge", 
+    gsap.fromTo(".skill-badge",
       { scale: 0.8, opacity: 0 },
       {
         scrollTrigger: {
@@ -67,9 +71,9 @@ export default function Stack() {
   }, { scope: sectionRef });
 
   return (
-    <section 
-      ref={sectionRef} 
-      id="stack" 
+    <section
+      ref={sectionRef}
+      id="stack"
       className="min-h-screen bg-[#050505] text-white py-24 px-8 md:px-24 flex flex-col justify-center relative z-10"
     >
       <div className="max-w-6xl mx-auto w-full">
@@ -85,8 +89,8 @@ export default function Stack() {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, i) => (
-                  <div 
-                    key={i} 
+                  <div
+                    key={i}
                     className="skill-badge px-5 py-2.5 bg-white/5 border border-white/10 rounded-full text-sm text-white/70 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-300 cursor-default"
                   >
                     {skill}
