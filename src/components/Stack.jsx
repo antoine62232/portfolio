@@ -74,7 +74,7 @@ export default function Stack() {
     <section
       ref={sectionRef}
       id="stack"
-      className="min-h-screen bg-[#050505] text-white py-24 px-8 md:px-24 flex flex-col justify-center relative z-10"
+      className="scroll-mt-24 min-h-screen bg-[#050505] text-white py-24 px-8 md:px-24 flex flex-col justify-center relative z-10"
     >
       <div className="max-w-6xl mx-auto w-full">
         <h2 className="skill-category text-sm md:text-lg text-[#D4AF37] font-mono tracking-widest uppercase mb-12">

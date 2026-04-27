@@ -31,7 +31,7 @@ export default function About() {
     <section 
       ref={sectionRef} 
       id="about" 
-      className="min-h-[70vh] bg-[#050505] text-white py-24 px-8 md:px-24 flex flex-col justify-center relative z-10"
+      className="scroll-mt-24 min-h-[70vh] bg-[#050505] text-white py-24 px-8 md:px-24 flex flex-col justify-center relative z-10"
     >
       <div className="max-w-6xl mx-auto w-full">
         <h2 className="about-text text-sm md:text-lg text-[#D4AF37] font-mono tracking-widest uppercase mb-8">

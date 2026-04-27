@@ -94,7 +94,7 @@ export default function Contact() {
     <section 
       ref={sectionRef} 
       id="contact" 
-      className="w-full min-h-screen bg-[#050505] text-white py-24 px-8 md:px-24 flex flex-col justify-center relative z-10"
+      className="scroll-mt-24 w-full min-h-screen bg-[#050505] text-white py-24 px-8 md:px-24 flex flex-col justify-center relative z-10"
     >
       <div className="max-w-4xl mx-auto w-full relative">
         

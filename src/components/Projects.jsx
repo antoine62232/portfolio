@@ -10,7 +10,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section ref={containerRef} id="projects" className="relative w-full h-[300vh] bg-[#050505]">
+    <section ref={containerRef} id="projects" className="scroll-mt-24 relative w-full h-[300vh] bg-[#050505]">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col items-center justify-center">
 
         {/* --- TITRE DE LA SECTION --- */}

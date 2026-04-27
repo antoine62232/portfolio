@@ -1,4 +1,6 @@
 "use client";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,29 +19,41 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Centre : Liens Sociaux */}
-        <div className="flex items-center gap-8">
+        {/* Centre : Liens Sociaux + Mentions légales */}
+        <div className="flex flex-col items-center gap-4">
+          <div className="flex items-center gap-8">
+            <a 
+              href="https://github.com/antoine62232" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="text-white/60 hover:text-[#D4AF37] transition-colors duration-300"
+            >
+              <FaGithub size={22} />
+            </a>
+            <a 
+              href="https://linkedin.com/in/antoine-bayart" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-white/60 hover:text-[#D4AF37] transition-colors duration-300"
+            >
+              <FaLinkedin size={22} />
+            </a>
+            <a 
+              href="mailto:antoinebayart@laposte.net"
+              aria-label="Email"
+              className="text-white/60 hover:text-[#D4AF37] transition-colors duration-300"
+            >
+              <MdEmail size={24} />
+            </a>
+          </div>
+
           <a 
-            href="https://github.com/antoine62232" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-white/60 hover:text-[#D4AF37] transition-colors duration-300 text-sm font-mono uppercase tracking-tighter"
+            href="/mentions-legales"
+            className="text-white/40 hover:text-[#D4AF37] transition-colors duration-300 text-xs font-mono uppercase tracking-tighter"
           >
-            GitHub
-          </a>
-          <a 
-            href="https://linkedin.com/in/antoine-bayart" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-white/60 hover:text-[#D4AF37] transition-colors duration-300 text-sm font-mono uppercase tracking-tighter"
-          >
-            LinkedIn
-          </a>
-          <a 
-            href="mailto:antoinebayart@laposte.net" 
-            className="text-white/60 hover:text-[#D4AF37] transition-colors duration-300 text-sm font-mono uppercase tracking-tighter"
-          >
-            Email
+            Mentions légales
           </a>
         </div>
 
