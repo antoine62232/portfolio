@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <>
       {/* --- LA NAVBAR FIXE EN HAUT --- */}
-      <nav className="fixed top-0 left-0 w-full z-50 px-8 py-6 bg-black/40 backdrop-blur-md border-b border-white/10 overflow-hidden">
+      <nav className="fixed top-0 left-0 w-full z-50 px-8 py-3 bg-black/40 backdrop-blur-md border-b border-white/10 overflow-hidden">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
 
           {/* Logo */}
