@@ -7,7 +7,7 @@ import * as THREE from "three";
 // La galaxie 3D avec des étoiles qui tournent et réagissent à la souris
 function Starfield() {
   const ref = useRef();
-  
+
   // Création de 5000 étoiles réparties au hasard dans un cube d'espace
   const [positions] = useState(() => {
     const count = 5000;
@@ -44,10 +44,13 @@ function Starfield() {
 // Le canvas 3D qui contient la galaxie et les étoiles filantes
 export default function Background3D() {
   return (
-    <div className="absolute inset-0 z-0 w-full h-full pointer-events-none">
+    <div
+      className="absolute inset-0 z-0 w-full h-full pointer-events-none"
+      aria-hidden="true"
+    >
       <Canvas camera={{ position: [0, 0, 5] }}>
         {/* On ajoute le fond étoilé */}
-        <Starfield />      
+        <Starfield />
       </Canvas>
     </div>
   );

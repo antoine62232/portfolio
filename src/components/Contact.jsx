@@ -83,11 +83,10 @@ export default function Contact() {
         "-=0.2"
       );
     })
-    .catch((error) => {
+    .catch(() => {
       // En cas d'erreur, on affiche une alerte et on réactive le bouton d'envoi
-      console.log("Erreur EmailJS:", error);
       setIsSubmitting(false);
-      alert("Oops, une erreur est survenue lors de l'envoi. Veuillez réessayer.");
+      alert("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
     });
   };
 
@@ -117,58 +116,65 @@ export default function Contact() {
             >
               {/* Ajout du formRef sur la balise form */}
               <form ref={formRef} onSubmit={handleSubmit} className="form-content flex flex-col space-y-8">
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="relative group">
-                    <input 
-                      type="text" 
-                      name="user_name" 
-                      required 
-                      className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors peer"
-                      placeholder="Votre nom"
-                    />
-                  </div>
-                  <div className="relative group">
-                    <input 
-                      type="text" 
-                      name="user_firstname" 
-                      required 
-                      className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors peer"
-                      placeholder="Votre prénom"
-                    />
-                  </div>
+  
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="relative group">
+      <label htmlFor="user_name" className="sr-only">Votre nom</label>
+      <input 
+        id="user_name"
+        type="text" 
+        name="user_name" 
+        required 
+        className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors peer"
+        placeholder="Votre nom"
+      />
+    </div>
+    <div className="relative group">
+      <label htmlFor="user_firstname" className="sr-only">Votre prénom</label>
+      <input 
+        id="user_firstname"
+        type="text" 
+        name="user_firstname" 
+        required 
+        className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors peer"
+        placeholder="Votre prénom"
+      />
+    </div>
+  </div>
 
-                </div>
+  <div className="relative group">
+    <label htmlFor="user_email" className="sr-only">Votre adresse email</label>
+    <input 
+      id="user_email"
+      type="email" 
+      name="user_email"
+      required 
+      className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors peer"
+      placeholder="Votre adresse email"
+    />
+  </div>
 
-                <div className="relative group">
-                  <input 
-                    type="email" 
-                    name="user_email"
-                    required 
-                    className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors peer"
-                    placeholder="Votre adresse email"
-                  />
-                </div>
+  <div className="relative group">
+    <label htmlFor="message" className="sr-only">Votre message</label>
+    <textarea 
+      id="message"
+      name="message"
+      required 
+      rows="4"
+      className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors resize-none peer"
+      placeholder="Votre message..."
+    ></textarea>
+  </div>
 
-                <div className="relative group">
-                  <textarea 
-                    name="message"
-                    required 
-                    rows="4"
-                    className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors resize-none peer"
-                    placeholder="Votre message..."
-                  ></textarea>
-                </div>
+  <button 
+    type="submit" 
+    disabled={isSubmitting}
+    className="mt-4 self-start px-8 py-3 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-all duration-300 font-mono tracking-wider uppercase text-sm"
+  >
+    {isSubmitting ? "Envoi..." : "Envoyer"}
+  </button>
 
-                <button 
-                  type="submit" 
-                  disabled={isSubmitting}
-                  className="mt-4 self-start px-8 py-3 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-all duration-300 font-mono tracking-wider uppercase text-sm"
-                >
-                  {isSubmitting ? "Envoi..." : "Envoyer"}
-                </button>
-
-              </form>
+</form>
             </div>
           )}
 

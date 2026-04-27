@@ -1,9 +1,9 @@
 "use client";
 import { useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import ProjectsCarousel from "./ProjectsCarousel";
+import ProjectsCarousel from "./canvas/ProjectsCarousel";
 import ProjectFocus from "./ui/ProjectFocus"; 
-import { AnimatePresence } from "framer-motion"; 
+import { AnimatePresence, motion } from "framer-motion"; 
 
 export default function Projects() {
   const containerRef = useRef(null);
@@ -19,7 +19,21 @@ export default function Projects() {
             &lt; 03. Mes Projets /&gt;
           </h2>
         </div>
-        
+
+        {/* --- INDICATEUR DE SCROLL (visible uniquement sur mobile) --- */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 md:hidden"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <span className="text-white/40 font-mono text-[10px] uppercase tracking-widest">
+            Continuer
+          </span>
+          <svg width="16" height="24" viewBox="0 0 16 24" fill="none" aria-hidden="true">
+            <path d="M8 0v20M1 13l7 7 7-7" stroke="#D4AF37" strokeOpacity="0.5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </motion.div>
+
         {/* LA CARTE FOCUS (Gérée par Framer Motion pour les animations d'entrée/sortie) */}
         <AnimatePresence>
           {selectedProject && (

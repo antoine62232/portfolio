@@ -27,7 +27,7 @@ export default function Navbar() {
       {/* --- LA NAVBAR FIXE EN HAUT --- */}
       <nav className="fixed top-0 left-0 w-full z-50 px-8 py-6 bg-black/40 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          
+
           {/* Logo provisoire */}
           <div className="text-xl font-bold text-white tracking-tighter relative z-50">
             PORT<span className="text-[#D4AF37] drop-shadow-[0_0_10px_rgba(212,175,55,0.4)]">FOLIO</span>
@@ -43,9 +43,12 @@ export default function Navbar() {
           </ul>
 
           {/* VERSION MOBILE : Bouton Hamburger (Caché sur ordinateur) */}
-          <button 
+          <button
             className="md:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-2"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
           >
             {/* Lignes du Hamburger qui se transforment en croix */}
             <span className={`h-[2px] w-8 bg-[#D4AF37] transition-all duration-300 ${isOpen ? "rotate-45 translate-y-[10px]" : ""}`} />
@@ -59,7 +62,8 @@ export default function Navbar() {
       {/* --- LE MENU OVERLAY MOBILE --- */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, y: "-100%" }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
@@ -81,9 +85,9 @@ export default function Navbar() {
                 </motion.a>
               ))}
             </div>
-            
+
             {/* Petit détail de finition en bas du menu */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
