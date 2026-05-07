@@ -1,14 +1,24 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function ProjectFocus({ project, onClose }) {
   const [mounted, setMounted] = useState(false);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     setMounted(true);
+
+    // PRECHARGER LA VIDÉO AU MONTAGE DU COMPOSANT
+    if (project?.video) {
+      const video = document.createElement('video');
+      video.src = project.video;
+      video.preload = 'auto';
+      // On force le navigateur à commencer le téléchargement
+      video.load();
+    }
 
     // BLOQUER LE SCROLL (HTML + BODY)
     const originalHtmlOverflow = document.documentElement.style.overflow;
@@ -21,7 +31,7 @@ export default function ProjectFocus({ project, onClose }) {
       document.documentElement.style.overflow = originalHtmlOverflow;
       document.body.style.overflow = originalBodyOverflow;
     };
-  }, []);
+  }, [project?.video]);
 
   if (!project || !mounted) return null;
 
@@ -59,13 +69,19 @@ export default function ProjectFocus({ project, onClose }) {
         <div className="w-full md:w-3/5 bg-black flex items-center justify-center min-h-[30vh] md:min-h-0 relative">
           {project.video ? (
             <video
-              src={project.video}
+              ref={videoRef}
               autoPlay
               loop
               muted
               playsInline
+              preload="auto"
               className="w-full h-full object-contain"
-            />
+            >
+              {/* Support pour WebM (optimisé) et fallback MP4 */}
+              <source src={project.video.replace(/\.mp4$/, '.webm')} type="video/webm" />
+              <source src={project.video} type="video/mp4" />
+              Votre navigateur ne supporte pas les vidéos HTML5.
+            </video>
           ) : (
             <Image
               src={project.image}
