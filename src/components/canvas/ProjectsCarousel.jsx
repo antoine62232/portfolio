@@ -42,6 +42,14 @@ const projects = [
     video: "/projects/demo_lol.mp4",
     description: "Création d'un portail web dynamique basé sur l'univers de League of Legends. Consommation de l'API officielle de Riot Games couplée à des bases de données locales personnalisées pour générer un explorateur de factions, un dictionnaire de champions et un système de quiz interactif."
   },
+  { 
+  id: 5, 
+  title: "PREDIKTORA", 
+  stack: "Python • XGBoost • Scikit-learn • Streamlit", 
+  image: "/projects/portfolio_prediktora.webp",
+  video: "/projects/demo_prediktora.mp4",
+  description: "Conception d'une intelligence artificielle prédisant l'intégralité de la Coupe du Monde 2026, de la phase de groupes au vainqueur final. Entraînement d'un modèle de classification XGBoost sur plus de 5 800 matchs internationaux, appuyé sur un classement Elo développé maison, et évaluation rigoureuse par backtest à séparation temporelle. Confrontation en direct des pronostics à la réalité grâce à un robot automatisé (GitHub Actions + API football-data.org)."
+},
 ];
 
 export default function ProjectsCarousel({ sectionRef, onProjectClick }) {
